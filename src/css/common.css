@@ -16,3 +16,56 @@ img {
   display: block;
   max-width: 100%;
 }
+
+.timer {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  flex-wrap: wrap;
+
+  color: rgba(9,122,63,0.68);
+  font-size: 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.field:not(:last-child) {
+  margin-right: 15px;
+}
+
+.timer--title {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+
+  color: #bdb402;
+}
+
+@keyframes scaleAndColor {
+  0% {
+    color: deeppink;
+  }
+
+  50% {
+    color: orange;
+  }
+
+  100% {
+    color: deepskyblue;
+  }
+}
+
+.timer--title__animation {
+  animation-name: scaleAndColor;
+  animation-duration: 2000ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
