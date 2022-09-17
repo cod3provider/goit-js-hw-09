@@ -14,11 +14,13 @@ const backgroundSetter = {
     this.intervalId = setInterval(() => {
       this.isActive = true;
       document.body.style.backgroundColor = getRandomHexColor();
-    }, 1000)
+    }, 1000);
+    refs.startBtn.setAttribute('disabled', '');
   },
   stop() {
     this.isActive = false;
     clearInterval(this.intervalId);
+    refs.startBtn.removeAttribute('disabled');
   },
 }
 
