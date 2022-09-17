@@ -22,7 +22,7 @@ function onSubmitForm (evt) {
   let { delayRef,
         stepRef,
         amountRef
-    } = refs;\
+    } = refs;
 
   for (let i = 1; i <= amountRef; i += 1) {
     createPromise(i, delayRef)
@@ -47,16 +47,4 @@ function createPromise(position, delay) {
       }, delay);
   });
 }
-
-
-// const onSuccess = value => {
-//   console.log('✅ Fulfilled');
-//   return value;
-// }
-//
-// const onError = error => {
-//   console.log('❌ Rejected');
-//   return error;
-// }
-// Увеличение последующей задержки delay += step
 
